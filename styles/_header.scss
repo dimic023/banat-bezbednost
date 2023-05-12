@@ -1,0 +1,40 @@
+header {
+  @include flexCenterBetween;
+  padding: 0 40px;
+  background-color: $color-light;
+  .logo {
+    //height: 100px;
+    img {
+      height: auto;
+    }
+  }
+  .links {
+    a {
+      color: $color-black;
+      margin-left: 40px;
+    }
+  }
+  .menu-container {
+    position: relative;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+  }
+
+  .hamburger-react {
+    position: absolute;
+    //top: 0.5rem;
+    //right: 0.5rem;
+    z-index: 1001;
+    cursor: pointer;
+  }
+}

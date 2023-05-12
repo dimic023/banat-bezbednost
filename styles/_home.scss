@@ -1,0 +1,105 @@
+main {
+  .mainImage {
+    background-image: url("/images/background.png");
+    background-size: cover;
+    //background-position: bottom;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+    h1 {
+      color: $color-white;
+      z-index: 10;
+      position: relative;
+      font-size: 60px;
+      padding-top: 150px;
+      font-weight: 700;
+    }
+    .down-arrow {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem; /* adjust as needed */
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    .down-arrow svg {
+      width: 5rem; /* adjust the size of the arrow as needed */
+      height: 4rem;
+      fill: $color-white; /* adjust the color of the arrow as needed */
+      z-index: 10;
+    }
+  }
+  .mainImage::before {
+    content: ""; /* add content to the pseudo-element */
+    position: absolute; /* set the position to absolute so it covers the entire div */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* set the background color to black with 50% opacity */
+    z-index: 1; /* set the z-index to -1 to position the pseudo-element behind the content of the div */
+  }
+
+  .services {
+    text-align: center;
+
+    .servicesGrid {
+      text-align: start;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      .service {
+        padding: 30px;
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        ul {
+          // :nth-child(1) {
+
+          // }
+          li {
+            margin-left: 20px;
+            list-style: disc;
+            &.bolded:first-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    width: 100%;
+    background-color: $color-yellow;
+    padding: 50px 500px;
+    @include flexAlign;
+    text-align: center;
+    .item {
+      margin: 20px;
+      &.bordered {
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        padding: 10px 30px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        &.big {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .contact {
+    text-align: center;
+  }
+}

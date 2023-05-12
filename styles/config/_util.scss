@@ -1,0 +1,74 @@
+$border-radius: 20px;
+$border-radius-input: 40px;
+$border-radius-button: 40px;
+$border-radius-banner-button: 5px;
+$box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$bp-xxl: 1700px;
+$bp-xl: 1500px;
+$bp-lg: 1380px;
+$bp-md: 1150px;
+$bp-sm: 1024px;
+$bp-xs: 700px;
+$bp-xxs: 400px;
+
+.container {
+  max-width: 1920px;
+  padding: 0 420px;
+  margin: 0 auto;
+  @include media-max($bp-xxl) {
+    padding: 0 350px;
+  }
+  @include media-max($bp-xl) {
+    padding: 0 50px;
+  }
+  @include media-max($bp-lg) {
+    padding: 0 30px;
+  }
+  @include media-max($bp-md) {
+    padding: 0 25px;
+  }
+  @include media-max($bp-sm) {
+    padding: 0 10px;
+    margin: 0;
+  }
+}
+
+.paper {
+  background: $color-light;
+  border-radius: $border-radius;
+}
+
+.pageHolder {
+  padding: 60px 0;
+  @include media-max($bp-md) {
+    padding: 30px 0;
+  }
+}
+
+h1.pageTitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+h2.sectionTitle {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+span.underline {
+  display: inline-block;
+  border-bottom: 10px solid $color-yellow;
+  width: 7%;
+  margin: 10px auto;
+  text-align: center;
+  /* adjust the width and margin as needed */
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
