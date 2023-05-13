@@ -6,6 +6,9 @@ main {
     min-height: 100vh;
     position: relative;
     text-align: center;
+    @include media-max($bp-sm) {
+      min-height: 40vh;
+    }
     h1 {
       color: $color-white;
       z-index: 10;
@@ -13,11 +16,20 @@ main {
       font-size: 60px;
       padding-top: 150px;
       font-weight: 700;
+      @include media-max($bp-sm) {
+        font-size: 40px;
+        padding-top: 60px;
+        font-weight: 500;
+      }
     }
     .down-arrow {
       display: flex;
       justify-content: center;
       margin-top: 1rem; /* adjust as needed */
+      @include media-max($bp-sm) {
+        margin-top: 0;
+        //margin-bottom: 20px;
+      }
       :hover {
         cursor: pointer;
       }
@@ -26,6 +38,9 @@ main {
     .down-arrow svg {
       width: 5rem; /* adjust the size of the arrow as needed */
       height: 4rem;
+      @include media-max($bp-sm) {
+        width: 1rem;
+      }
       fill: $color-white; /* adjust the color of the arrow as needed */
       z-index: 10;
     }
@@ -53,6 +68,9 @@ main {
       text-align: start;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      @include media-max($bp-sm) {
+        grid-template-columns: 100%;
+      }
       gap: 30px;
       .service {
         padding: 30px;
@@ -80,14 +98,31 @@ main {
     width: 100%;
     background-color: $color-yellow;
     padding: 50px 500px;
+    margin-top: 60px;
     @include flexAlign;
     text-align: center;
+    @include media-max($bp-lg) {
+      padding: 50px 300px;
+    }
+    @include media-max($bp-sm) {
+      flex-wrap: wrap;
+      padding: 0;
+    }
     .item {
       margin: 20px;
+      @include media-max($bp-sm) {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+      }
       &.bordered {
         border-left: 2px solid white;
         border-right: 2px solid white;
         padding: 10px 30px;
+        @include media-max($bp-sm) {
+          border: none;
+          //margin: 0;
+        }
       }
       p {
         font-weight: 600;
@@ -101,5 +136,38 @@ main {
   }
   .contact {
     text-align: center;
+
+    .mapContainer {
+      height: 50vh;
+      margin-top: 40px;
+      overflow: hidden;
+    }
+    .infos {
+      display: flex;
+      align-items: baseline;
+
+      gap: 240px;
+      text-align: left;
+      margin-top: 40px;
+      @include media-max($bp-sm) {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      h4 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      p,
+      a {
+        font-size: 18px;
+      }
+      br {
+        @include media-max($bp-sm) {
+          display: none;
+        }
+      }
+    }
   }
 }

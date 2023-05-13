@@ -1,7 +1,14 @@
 header {
+  position: relative;
   @include flexCenterBetween;
   padding: 0 40px;
   background-color: $color-light;
+
+  @include media-max($bp-sm) {
+    padding: 0;
+    flex-wrap: wrap;
+    //display: block;
+  }
   .logo {
     //height: 100px;
     img {
@@ -9,32 +16,63 @@ header {
     }
   }
   .links {
+    @include media-max($bp-sm) {
+      display: none;
+      justify-content: space-around;
+      gap: 10px;
+      padding: 0 10px;
+      //text-align: center;
+    }
+
     a {
       color: $color-black;
       margin-left: 40px;
+      @include media-max($bp-sm) {
+        //margin-left: 10px;
+        font-size: 14px;
+      }
     }
   }
+
   .menu-container {
     position: relative;
   }
 
-  .menu {
+  // .menu {
+  //   position: absolute;
+  //   top: 100%;
+  //   left: 0;
+  //   width: 100%;
+  //   padding: 1rem;
+  //   background-color: white;
+  //   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  //   z-index: 1000;
+  //   display: none;
+  // }
+
+  .hamburger {
+    @include media-max($bp-sm) {
+      display: flex;
+      height: 40px;
+      //z-index: 99999;
+      margin: auto 0;
+    }
+  }
+  .mobileLinks {
     position: absolute;
-    top: 100%;
+    top: 90px;
     left: 0;
     width: 100%;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
-  }
-
-  .hamburger-react {
-    position: absolute;
-    //top: 0.5rem;
-    //right: 0.5rem;
-    z-index: 1001;
-    cursor: pointer;
+    background-color: $color-yellow;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 999;
+    text-align: center;
+    a {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
   }
 }

@@ -67,6 +67,42 @@ export default function Home() {
           <div className="contact">
             <h2 className="sectionTitle">KONTAKT</h2>
             <span className="underline"></span>
+            <div className="mapContainer">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.3673877747933!2d20.3885392!3d45.38175929999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475adb6ae7831e5d%3A0x12de44ca75929b39!2z0JTRgCDQnNC40YDQvtGB0LvQsNCy0LAg0KLQuNGA0YjQsCAzLCDQl9GA0LXRmtCw0L3QuNC9!5e0!3m2!1ssr!2srs!4v1683982384888!5m2!1ssr!2srs"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div className="infos">
+              <div className="left">
+                <h4>Informacije</h4>
+                <p>
+                  Za sve informacije pozovite nas na 060 568 4777 <br /> ili nas
+                  posetite na adresi Miroslava Tirša 3, Zrenjanin
+                </p>
+              </div>
+              <div className="right">
+                <h4>Kancelarija</h4>
+                <p>
+                  Dr Miroslava Tirša 3 <br />
+                  Zrenjanin, 23000
+                </p>
+                <p>
+                  <a href="tel:+381 60 568 4777 ">Tel: +381 60 568 4777 </a>
+                  <br />
+                </p>
+                <p>
+                  <a href="mailto: vvucetic64@gmail.com">
+                    Email: vvucetic64@gmail.com
+                  </a>{" "}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
