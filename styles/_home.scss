@@ -145,8 +145,7 @@ main {
     .infos {
       display: flex;
       align-items: baseline;
-
-      gap: 240px;
+      justify-content: space-between;
       text-align: left;
       margin-top: 40px;
       @include media-max($bp-sm) {

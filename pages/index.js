@@ -93,7 +93,9 @@ export default function Home() {
                   Zrenjanin, 23000
                 </p>
                 <p>
-                  <a href="tel:+381 60 568 4777 ">Tel: +381 60 568 4777 </a>
+                  <a href="tel:+381 60 568 4777 ">
+                    Tel: +381 60 568 4777 Vladimir Vučetić{" "}
+                  </a>
                   <br />
                 </p>
                 <p>
