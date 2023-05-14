@@ -64,7 +64,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container">
-          <div className="contact">
+          <div className="contact" id="contact">
             <h2 className="sectionTitle">KONTAKT</h2>
             <span className="underline"></span>
             <div className="mapContainer">

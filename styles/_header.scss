@@ -27,6 +27,7 @@ header {
     a {
       color: $color-black;
       margin-left: 40px;
+      cursor: pointer;
       @include media-max($bp-sm) {
         //margin-left: 10px;
         font-size: 14px;

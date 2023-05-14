@@ -4,6 +4,8 @@ import Logo from "public/images/BBLOGO3.png";
 import Link from "next/link";
 import { React, useState } from "react";
 
+import { Link as ScrollLink } from "react-scroll";
+
 //import useWindowSize from "@/helpers/useWindowSize";
 
 export default function Header() {
@@ -37,11 +39,19 @@ export default function Header() {
       </div>
       {showMenu && (
         <div className="mobileLinks">
-          <Link href="#">POČETNA</Link>
-          <Link href="#">USLUGE</Link>
-          <Link href="#">O NAMA</Link>
-          <Link href="#">LICENCE</Link>
-          <Link href="#">KONTAKT</Link>
+          <Link href="" onClick={toggleMenu}>
+            POČETNA
+          </Link>
+          <Link href="/#services" onClick={toggleMenu}>
+            USLUGE
+          </Link>
+          {/* <Link href="#">O NAMA</Link> */}
+          <Link href="/licence" onClick={toggleMenu}>
+            LICENCE
+          </Link>
+          <Link href="/#contact" onClick={toggleMenu}>
+            KONTAKT
+          </Link>
         </div>
       )}
       {/* <div className="mobileLinks">
@@ -52,11 +62,13 @@ export default function Header() {
         <Link href="#">KONTAKT</Link>
       </div> */}
       <div className="links">
-        <Link href="#">POČETNA</Link>
-        <Link href="#">USLUGE</Link>
-        <Link href="#">O NAMA</Link>
-        <Link href="#">LICENCE</Link>
-        <Link href="#">KONTAKT</Link>
+        <Link href="/">POČETNA</Link>
+        <Link href="/#services">USLUGE</Link>
+        {/* <Link href="#">O NAMA</Link> */}
+        <Link href="/licence">LICENCE</Link>
+        <Link href="/#contact" smooth={true} duration={500}>
+          KONTAKT
+        </Link>
       </div>
     </header>
   );
